@@ -9,12 +9,12 @@ from openpyxl.styles import Alignment
 df = pd.read_csv('IMDB Top 250 Movies.csv', low_memory=False)
 df.isnull().sum()
 
-#Creating a rev list to store gross income values
+#Criando uma lista para armazenar os valores do box office
 rev = []
 for i in df['box_office'].values:
     rev.append(i)
 
-#Removing comma from revenue  
+#Removendo virgulas  
 rev_c=[]
 for i in rev:
     if ',' in str(i):
@@ -22,13 +22,8 @@ for i in rev:
         rev_c.append(j)
     else:
         rev_c.append(i)  
-#Assigning the clean list as value for Gross Income column        
-#df['box_office']=rev_c
 
-#df['box_office']=df['box_office'].astype(float)
-#df.dtypes
-
-##Votos
+##Lidando com a parte dos votos
 rating = []
 for i in df['rating']:
     rating.append(i)
