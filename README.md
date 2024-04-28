@@ -3,7 +3,7 @@
 
 ## Seções:
 - [Resumo](#Resumo)
-- [Destrinchando o código](#Destrinchando-o-código)
+- [Destrinchando o código](#Destrinchando-o-código-Passo-a-Passo)
 - [Equipe](#equipe)
 
 
