@@ -6,10 +6,10 @@ services:
     container_name: mysql-01
     restart: always
     environment:
+      MYSQL_DATABASE: IMDB
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: guilherme
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: gui
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
     ports:
       - "3306:3306"
     volumes:
