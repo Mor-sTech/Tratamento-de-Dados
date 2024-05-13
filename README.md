@@ -13,23 +13,12 @@
 
 ## Destrinchando o código - Passo a Passo
 
-* Lê um arquivo CSV chamado 'IMDB Top 250 Movies.csv' e carrega os dados em um DataFrame df.
-* Remove valores nulos do DataFrame.
-* Cria uma lista chamada rev para armazenar os valores da coluna 'box_office'.
-* Remove vírgulas dos valores na lista rev.
-* Lida com a parte dos votos da coluna 'rating' do DataFrame, removendo vírgulas dos valores e convertendo-os para o tipo float.
-* Define uma função format_accounting_number para formatar os valores em formato de número contábil do Excel.
-* Aplica a formatação aos valores das colunas 'box_office' e 'budget'.
-* Renomeia várias colunas do DataFrame df.
-* Cria um novo arquivo Excel e uma planilha ativa.
-* Define a largura das colunas da planilha.
-* Converte o DataFrame para o formato Excel e o salva na planilha.
-* Aplica o formato de número contábil às células da coluna 'box_office'.
-* Centraliza e alinha o texto no meio de todas as células da planilha.
-* Cria bordas finas em todas as células da planilha.
-* Aplica estilo de fonte negrito à linha 1 da planilha.
-* Aplica a cor de preenchimento à linha 1 da planilha.
-* Salva as alterações no arquivo Excel.
+* Importa as bibliotecas necessárias: pandas, mysql.connector e create_engine do sqlalchemy.
+* Carrega um arquivo CSV chamado 'IMDB_top_250_movies.csv' em um DataFrame do pandas chamado df_imdb.
+* Exibe as primeiras linhas do DataFrame df_imdb usando o método head().
+* Define uma string params que contém as informações de conexão para o banco de dados MySQL. Neste caso, está usando o usuário root, senha root, host localhost e a porta 3306, com o banco de dados chamado IMDB.
+* Cria um objeto engine usando a função create_engine do SQLAlchemy, passando a string de conexão params como argumento. O parâmetro echo=True é usado para habilitar a exibição de mensagens de log que mostram as consultas SQL geradas pelo SQLAlchemy.
+* Usa o método to_sql() do pandas DataFrame para inserir os dados do DataFrame df_imdb na tabela imdb_stage no banco de dados MySQL especificado pela conexão engine. O parâmetro if_exists='replace' especifica que se a tabela imdb_stage já existir, ela será substituída pelos dados do DataFrame. O parâmetro index=False indica que os índices do DataFrame não devem ser incluídos como coluna no banco de dados.
 
 ## Equipe
 

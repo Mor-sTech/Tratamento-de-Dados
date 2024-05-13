@@ -7,7 +7,7 @@ services:
     restart: always
     environment:
       MYSQL_DATABASE: IMDB
-      MYSQL_USER: mysql
+      MYSQL_USER: root
       MYSQL_PASSWORD: guilherme
       MYSQL_ROOT_PASSWORD: root
     ports:
