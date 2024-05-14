@@ -10,7 +10,7 @@
 
 
 ## Resumo
-### Nesse repositório contem um código Python para tratamento do [dataset](https://www.kaggle.com/datasets/rajugc/imdb-top-250-movies-dataset) escolhido para o projeto de Database Application, o arquivo csv do dataset sem tratamento e o arquivo gerado pelo código Python utilizado, pós tratamento.
+### Nesse repositório contem um código Python para tratamento do [dataset](https://www.kaggle.com/datasets/rajugc/imdb-top-250-movies-dataset) escolhido para o projeto de Database Application, o arquivo csv original do dataset, o dicionário de dados, que contém informações sobre os dados trazidos desse dataset, e o arquivo docker compose, que é necessário para comunicação com o MYSQL Worckbench.
 
 ## Destrinchando o código - Passo a Passo
 
